@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Beat_range",
+    "type": "beat_range",
+    "primaryTypes": ["ROBBERY", "BATTERY", "MOTOR VEHICLE THEFT"],
+    "beatMin": 1524, "beatMax": 1724,
+    "timeWindow": 1800000
+  },
+  {
+    "name": "Lat_lon_range",
+    "type": "lat_lon_range",
+    "primaryTypes": ["ROBBERY", "BATTERY", "MOTOR VEHICLE THEFT"],
+    "latitude": {"min": 41.89, "max": 41.97},
+    "longitude": {"min": -87.76, "max": -87.70},
+    "timeWindow": 1800000
+  },
+  {
+    "name": "Or_primary_lat_lon",
+    "type": "or_primary_lat_lon",
+    "timeWindow": 1800000,
+    "latitude": {"min": 41.89, "max": 41.97},
+    "longitude": {"min": -87.76, "max": -87.70},
+    "primaryTypesList": [["ROBBERY"], ["BATTERY", "ASSAULT"], ["MOTOR VEHICLE THEFT"]]
+  },
+  {
+    "name": "Cross_event_lat_lon",
+    "type": "cross_event",
+    "primaryTypes": ["ROBBERY", "BATTERY", "MOTOR VEHICLE THEFT"],
+    "aLatitudeMin": 41.91, "aLatitudeMax": 41.97,
+    "aLongitudeMin": -87.73, "aLongitudeMax": -87.69,
+    "bLatitudeMin": 41.85, "bLatitudeMax": 41.90,
+    "bLongitudeMin": -87.80, "bLongitudeMax": -87.75,
+    "timeWindow": 1800000,
+    "attributeEqualities": ["A.LATITUDE=C.LATITUDE", "A.LONGITUDE=C.LONGITUDE"]
+  }
+]

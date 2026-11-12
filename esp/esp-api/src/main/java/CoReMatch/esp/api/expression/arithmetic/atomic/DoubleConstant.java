@@ -1,0 +1,16 @@
+package CoReMatch.esp.api.expression.arithmetic.atomic;
+
+import CoReMatch.event.Attribute.DataType;
+
+/**
+ * A constant double value
+ */
+public class DoubleConstant extends Constant<Double> {
+
+    /**
+     * @param value The value
+     */
+    public DoubleConstant(Double value) {
+        super(value, DataType.DOUBLE);
+    }
+}
